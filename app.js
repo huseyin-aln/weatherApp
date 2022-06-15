@@ -14,9 +14,9 @@ const getWeatherInfo = async() => {
     try {
         const response = await fetch(url);
         const weatherInfo = await response.json();
-        console.log(weatherInfo);
+        // console.log(weatherInfo);
         const {weather, main, name} = weatherInfo;
-        console.log(weather, main, name);
+        // console.log(weather, main, name);
         container.innerHTML += `${main.temp} <br> ${name} <br> ${weather[0].description} <br> <img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png"/> <br>`
     }
     catch(error) {
